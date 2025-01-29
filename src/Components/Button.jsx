@@ -5,7 +5,7 @@ const Buttons = () => {
   return (
     <>
     <a href={resume} target="_blank"><Button className="rounded-2 cursor-pointer">Resume</Button></a>
-    <Button variant="outlined" className="rounded-2 cursor-pointer">Contact Me</Button>
+    <a href="https://wa.me/917990471946?text=Hii Yasin Vahora" target="_blank"><Button variant="outlined" className="rounded-2 cursor-pointer">Contact Me</Button></a>
     </>
   )
 }
