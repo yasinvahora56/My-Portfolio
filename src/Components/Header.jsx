@@ -5,13 +5,26 @@ import SocialLinks from "./SocialLinks";
 import CurruntJob from "./CurruntJob";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import { useState } from "react";
+import { HexColorPicker } from "react-colorful";
 const Header = () => {
+  const [color, setColor] = useState("#6a11cb");
+  const [openPicker, setOpenPicker] = useState(false);
+  const byDefaultColor = "#6a11cb";
+
+  function colorValueChange(newColor){
+    setColor(newColor);
+  }
+
+
+
   return (
     <>
     <div className="relative w-full h-[300px]">
       
 
-      <div className="absolute inset-0 bg-cover bg-center justify-center item-center" style={{ backgroundImage: "url('https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg?t=st=1738130082~exp=1738133682~hmac=f4de31c44e93fdafa3e5b2b8e1359441db756fae20f05aec8a5383d2b4a38e6b&w=900')" }}>
+      <div className="absolute inset-0 bg-cover bg-center justify-center item-center" style={{ backgroundImage: `linear-gradient(to right, ${byDefaultColor}, ${color})` }}
+ >
      
       <h1 className="absolute top-20 right-120 text-8xl text-bold text-white">MY PORTFOLIO</h1>
     
@@ -21,9 +34,13 @@ const Header = () => {
       
 
 
-      {/* <button className="absolute right-5 top-5 p-2 bg-linear-65 from-purple-500 to-pink-500 rounded-lg outline-black">
-  <FaRegEdit className="text-white text-2xl cursor-pointer" />
-</button> */}
+
+      <a className="absolute right-5 top-5 p-1  rounded-lg outline-black" >
+  <FaRegEdit className="text-white text-2xl cursor-pointer" onClick={()=>{setOpenPicker(!openPicker)}} />
+</a>
+
+
+
 
       <div className="container">
 
@@ -56,14 +73,17 @@ const Header = () => {
       <SocialLinks/>
       </div>
       <div className="justify-right absolute top-80 right-15">
-        <CurruntJob/>
+        <CurruntJob colors={color} byDefaultColors={byDefaultColor}/>
       </div>
       <div className="justify-left absolute top-150 left-35">
         <Projects/>
       </div>
       <div className="justify-left absolute top-120 right-15">
-        <Skills/>
+        <Skills color={color} byDefaultColors={byDefaultColor}/>
       </div>
+      <div className={`justify-left absolute top-5 right-20 ${openPicker? 'list-item':'hidden'}`}>
+        <HexColorPicker value={color} onChange={colorValueChange} />
+        </div>
       </>
       
     

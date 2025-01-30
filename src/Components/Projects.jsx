@@ -25,7 +25,7 @@ const Projects = () => {
   return (
     <div className='flex flex-row gap-4'>
     {projectCards.map((project, index) => (
-        <div key={index} className='bg-blue-100 p-4 flex flex-row gap-6 justify-center place-items-center rounded-lg'>
+        <div key={index} className='bg-linear-65 from-purple-200 to-pink-200 p-4 flex flex-row gap-6 justify-center place-items-center rounded-lg'>
         <div>
         <h1 className='font-bold text-1xl'>{project.title}</h1>
         <p className='text-sm'>{project.description}</p>

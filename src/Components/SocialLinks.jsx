@@ -23,7 +23,7 @@ const SocialLinks = () => {
       </a>
       <a 
         href="https://www.instagram.com/_i_am_yasin__/"
-        className="instagram social relative w-8 h-8 rounded-xl"
+        className="instagram social relative w-8 h-8 rounded-lg"
         style={{
           backgroundImage: `url(${image})`,
           backgroundSize: 'cover',
