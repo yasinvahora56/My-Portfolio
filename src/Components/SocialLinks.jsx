@@ -6,7 +6,6 @@ import {
     faGithub
   } from "@fortawesome/free-brands-svg-icons";
   import image from "../images/image.png"
-
 const SocialLinks = () => {
   return (
     <div className="flex flex-row gap-2">
@@ -15,12 +14,12 @@ const SocialLinks = () => {
         <FontAwesomeIcon className="text-blue-500" icon={faLinkedin} size="2x" />
       </a>
       <a href="https://github.com/yasinvahora56"
-        className="Github Icon">
+        className="Github Icon text-white">
         <FontAwesomeIcon icon={faGithub} size="2x" />
       </a>
-      <a href="https://www.twitter.com/jamesqquick" className="twitter social">
+      {/* <a href="https://www.twitter.com/jamesqquick" className="twitter social">
         <FontAwesomeIcon className="text-blue-400" icon={faTwitter} size="2x" />
-      </a>
+      </a> */}
       <a 
         href="https://www.instagram.com/_i_am_yasin__/"
         className="instagram social relative w-8 h-8 rounded-lg"
