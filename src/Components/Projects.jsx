@@ -19,6 +19,11 @@ const Projects = () => {
             description:"React Base Contact Application",
             link:"https://yasinvahora56.github.io/Online-Exam-Using-html-css-js/",
         },
+        {
+            title:"EMS Project",
+            description:"MERN Full Stack Project",
+            link:"https://ems-ircv.vercel.app/",
+        },
     ]
 
 
